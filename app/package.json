@@ -1,0 +1,28 @@
+{
+  "name": "nwn-server-status-http-server",
+  "version": "0.0.1",
+  "description": "simple http server responding with json of nwn game server status",
+  "scripts": {
+    "start": "pm2-runtime start ./dist/main.js",
+    "start:dev": "webpack --watch",
+    "build": "rimraf dist && webpack --env.production",
+    "clean": "rimraf dist && rimraf node_modules"
+  },
+  "author": "trjohnst",
+  "license": "ISC",
+  "engines": {
+    "node": ">=12"
+  },
+  "devDependencies": {
+    "dotenv-webpack": "^1.7.0",
+    "express": "^4.17.1",
+    "nodemon-webpack-plugin": "^4.3.1",
+    "rimraf": "^3.0.2",
+    "webpack": "^4.42.1",
+    "webpack-cli": "^3.3.11",
+    "webpack-node-externals": "^1.7.2"
+  },
+  "dependencies": {
+    "pm2": "^4.1.2"
+  }
+}
