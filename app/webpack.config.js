@@ -6,7 +6,9 @@ const getPlugins = (env) => {
   const isProduction = env.production;
 
   if (isProduction) {
-    return [];
+    return [
+      new DotenvPlugin()
+    ];
   }
 
   return [
