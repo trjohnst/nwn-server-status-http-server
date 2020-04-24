@@ -2,7 +2,7 @@ FROM node:12.13.0-alpine as builder
 
 COPY ./app /app
 WORKDIR /app/src
-RUN npm install
+RUN npm ci
 RUN npm run build
 
 FROM node:12.13.0-alpine as server
